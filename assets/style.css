@@ -152,3 +152,40 @@ h1 {
 #bienvenue {
     font-size: 3rem;
 }
+
+
+
+
+
+
+
+
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.animated-title2 {
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 20px;
+    background: url('./images/pattern.png') repeat; /* Utilisation du pattern */
+    background-size: 100px 100px; /* Ajuste la taille du pattern */
+    background-clip: text;
+    -webkit-background-clip: text; /* Compatibilité Webkit (Chrome/Safari) */
+    color: transparent; /* Rendre le texte transparent pour afficher le pattern */
+    animation: movePattern 5s linear infinite; /* Animation continue */
+}
+
+/* Animation du pattern */
+@keyframes movePattern {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -200px 0; /* Ajuste selon la vitesse et direction */
+    }
+}
