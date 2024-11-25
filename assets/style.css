@@ -7,16 +7,16 @@
 
 body {
     background: url(../assets/images/bg4.jpg) no-repeat;
-    /* background-position: cover; */
-    /* background-size: cover; */
-    /* height: 100vh; */
+    background-position: cover;
+    background-size: cover;
+    height: 100vh;
 }
 
 body {
         margin: 0;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        /* justify-content: center; */
+        /* align-items: center; */
         height: 100vh;
         /* background-color: #fff; */
         overflow: hidden;
@@ -86,16 +86,18 @@ main {
 .pattern-container {
     position: relative;
     display: inline-block;
-    z-index: 1;
+    /* z-index: 1; */
     background-color: transparent;
+    /* color: transparent; */
 }
 
 .animated-title {
     font-size: 5rem;
     font-weight: bold;
+    /* background-color: transparent; */
     color: transparent;
     position: relative;
-    z-index: 3; /* Pour que le titre soit au-dessus */
+    z-index: 1; /* Pour que le titre soit au-dessus */
     text-transform: uppercase;
     margin: 0;
     padding: 20px;
@@ -103,22 +105,21 @@ main {
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke: solid;
-    overflow: hidden;
 
 }
 
 /* Pattern arrière-plan */
-.pattern-container::before {
+.animated-title::before {
     content: '';
     position: absolute;
-    top: 500px;
-    left: 650px;
+    /* top: 500px; */
+    /* left: 650px; */
     width: 1000px;
     height: 200px;
     background-image: url('./images/pattern.png'); /* Remplace par le chemin de l'image */
     background-size: 100px 100px;
     background-repeat: repeat-x; /* Ajuste la taille du pattern */
-    z-index: 1; /* En dessous du texte */
+    z-index: -1; /* En dessous du texte */
     animation: movePattern 5s linear infinite; /* Animation continue */
     -webkit-mask: text; /* Clipping via le texte */
     mask: text;
@@ -133,4 +134,21 @@ main {
     100% {
         transform: translateX(-200px); /* Ajuste selon la vitesse désirée */
     }
+}
+
+
+.titre {
+    position: relative;
+    left: 5vw;
+    top: 60vh;
+}
+
+h1 {
+    position: relative;
+    left: 12vw;
+    top: 7vh
+}
+
+#bienvenue {
+    font-size: 3rem;
 }
