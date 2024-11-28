@@ -14,7 +14,7 @@ body {
 
 body {
         margin: 0;
-        display: flex;
+        /* display: flex; */
         /* justify-content: center; */
         /* align-items: center; */
         height: 100vh;
@@ -83,7 +83,7 @@ main {
 
 
 
-.pattern-container {
+/* .pattern-container { */
     position: relative;
     display: inline-block;
     /* z-index: 1; */
@@ -91,7 +91,7 @@ main {
     /* color: transparent; */
 }
 
-.animated-title {
+/* .animated-title { */
     font-size: 5rem;
     font-weight: bold;
     /* background-color: transparent; */
@@ -109,7 +109,7 @@ main {
 }
 
 /* Pattern arrière-plan */
-.animated-title::before {
+/* .animated-title::before { */
     content: '';
     position: absolute;
     /* top: 500px; */
@@ -127,7 +127,7 @@ main {
 }
 
 /* Animation du pattern */
-@keyframes movePattern {
+/* @keyframes movePattern { */
     0% {
         transform: translateX(0);
     }
@@ -138,21 +138,32 @@ main {
 
 
 .titre {
+    display: inline-block;
     position: relative;
-    left: 5vw;
+    left: 100px;
     top: 60vh;
+}
+
+p {
+    display: inline-block;
+    position: relative;
 }
 
 h1 {
     position: relative;
     left: 12vw;
-    top: 7vh
+    top: 1vh
 }
 
 #bienvenue {
     font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    position: relative;
+    left: 140px;
+    top: 64vh;
 }
-
 
 
 
@@ -167,17 +178,24 @@ h1 {
 }
 
 .animated-title2 {
+    display: inline-block;
+    position: relative;
+    left: 100px;
+    top: 60vh;
     font-size: 5rem;
     font-weight: bold;
     text-transform: uppercase;
     margin: 0;
     padding: 20px;
     background: url('./images/pattern.png') repeat; /* Utilisation du pattern */
-    background-size: 100px 100px; /* Ajuste la taille du pattern */
+    background-size: 300px 300px; /* Ajuste la taille du pattern */
     background-clip: text;
     -webkit-background-clip: text; /* Compatibilité Webkit (Chrome/Safari) */
     color: transparent; /* Rendre le texte transparent pour afficher le pattern */
     animation: movePattern 5s linear infinite; /* Animation continue */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke: solid;
 }
 
 /* Animation du pattern */
@@ -186,6 +204,6 @@ h1 {
         background-position: 0 0;
     }
     100% {
-        background-position: -200px 0; /* Ajuste selon la vitesse et direction */
+        background-position: 100px 0; /* Ajuste selon la vitesse et direction */
     }
 }
